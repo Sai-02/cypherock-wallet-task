@@ -1,8 +1,8 @@
-
+import Header from "./components/Header/Header";
 function App() {
   return (
-    <div className="text-center p-4">
-      Cypherock Wallet Task
+    <div className="">
+      <Header />
     </div>
   );
 }
