@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Wallet from "./components/Wallet/Wallet";
 function App() {
   return (
     <div className="">
@@ -8,8 +9,8 @@ function App() {
         height: "calc( 100vh - 55px )"
       }}>
         <Navbar />
-        <div className="p-4 flex items-center justify-center col-span-9 bg-[#0A1018]">
-          Good enough
+        <div className=" col-span-9 bg-[#0A1018]">
+          <Wallet/>
         </div>
       </div>
     </div>
