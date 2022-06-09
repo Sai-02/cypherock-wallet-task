@@ -1,8 +1,8 @@
 
 function App() {
   return (
-    <div className="App">
-        Cypherock Wallet Task
+    <div className="text-center p-4">
+      Cypherock Wallet Task
     </div>
   );
 }
