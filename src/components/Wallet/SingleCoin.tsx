@@ -1,11 +1,16 @@
+import { useState } from "react";
 import bitcoinIcon from "../../assets/bitcoinIcon.svg"
 import recieveIcon from "../../assets/recieveIcon.svg";
 import sendIcon from "../../assets/sendIcon.svg";
 import RecieveDialog from "./RecieveDialog";
 const SingleCoin = () => {
+    const [shouldOpenDialog, setShouldOpenDialog] = useState(false);
+    const openDialog = (val: boolean) => {
+        setShouldOpenDialog(val);
+    }
     return (
         <div className="">
-            <RecieveDialog />
+            <RecieveDialog shouldOpenDialog={shouldOpenDialog} setShouldOpenDialog={setShouldOpenDialog} />
             <div className="bg-[#161C23] pt-[19px] pb-[14px]  grid grid-cols-9 items-center">
                 <div className="col-span-2 flex items-center gap-[4px] justify-self-center">
                     <img src={bitcoinIcon} alt="" />  <span className="text-[#ADABAA] text-sm ">BITCOIN</span>
@@ -17,7 +22,9 @@ const SingleCoin = () => {
                     USD 0.5268
                 </div>
                 <div className="flex gap-[25px] justify-self-center col-span-3">
-                    <div className="flex items-center gap-[6px]">
+                    <div className="flex items-center gap-[6px] cursor-pointer" onClick={() => {
+                        openDialog(true)
+                    }} >
                         <img src={recieveIcon} alt="" />
                         <span className="text-[#8484F1] text-[14px]">
                             RECIEVE
