@@ -27,11 +27,13 @@ const RecieveDialog = (props: DialogProps) => {
                     background: "#13161A",
                     display: "flex",
                     justifyContent: "center",
+                    height: "90vh",
+                    maxHeight: "700px"
                 },
             }}
             fullWidth={true}
         >
-            <div className="p-[37px] bg-[#13161A] rounded w-full">
+            <div className="p-[37px] bg-[#13161A] rounded w-full h-full">
                 <div className="relative">
                     <h1 className="text-[white] text-center text-[22px]">Recieve</h1>
                     <div className="absolute right-0 top-0 bottom-0 m-auto flex items-center">
