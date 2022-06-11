@@ -4,6 +4,10 @@ import textIcon from "../../assets/textIcon.svg";
 import chevronDownIcon from "../../assets/chevronDownIcon.svg";
 import SingleCoin from "./SingleCoin";
 import Menu from "@mui/material/Menu";
+import bitcoinIcon from "../../assets/bitcoinIcon.svg";
+import ethereumIcon from "../../assets/ethereumIcon.svg";
+import binanceIcon from "../../assets/binanceIcon.svg";
+import ethereumBlueIcon from "../../assets/ethereumBlueIcon.svg";
 const CoinsList = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -47,21 +51,33 @@ const CoinsList = () => {
           >
             <div className="text-[white] py-3 px-8">
               <ul className="grid gap-3">
-                <li className="text-xs text-[#959595] cursor-pointer">Amount High - Low</li>
-                <li className="text-xs text-[#959595] cursor-pointer">Amount Low - High</li>
-                <li className="text-xs text-[#959595] cursor-pointer">Arrange A - Z</li>
-                <li className="text-xs text-[#959595] cursor-pointer">Arrange Z - A</li>
+                <li className="text-xs text-[#959595] cursor-pointer">
+                  Amount High - Low
+                </li>
+                <li className="text-xs text-[#959595] cursor-pointer">
+                  Amount Low - High
+                </li>
+                <li className="text-xs text-[#959595] cursor-pointer">
+                  Arrange A - Z
+                </li>
+                <li className="text-xs text-[#959595] cursor-pointer">
+                  Arrange Z - A
+                </li>
               </ul>
             </div>
           </Menu>
         </div>
       </div>
       <div className="mt-6 grid gap-[10px]">
-        <SingleCoin />
-        <SingleCoin />
-        <SingleCoin />
-        <SingleCoin />
-        <SingleCoin />
+        <SingleCoin name="Bitcoin" val="BTC 0.0025600" src={bitcoinIcon} />
+        <SingleCoin name="ETHEREUM" val="ETH 0.0025600" src={ethereumIcon} />
+        <SingleCoin name="BINANCE COIN" val="BTC 0.0025600" src={binanceIcon} />
+        <SingleCoin name="Bitcoin" val="BTC 0.0025600" src={bitcoinIcon} />
+        <SingleCoin
+          name="ETHEREUM"
+          val="ETH 0.0025600"
+          src={ethereumBlueIcon}
+        />
       </div>
     </div>
   );
